@@ -138,3 +138,49 @@ nav ul li a {
   line-height: 1.4;
   color: #ddd;
 }
+
+/* ===== Quote Section ===== */
+.quote {
+  background-color: #C271FF;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.quote-container {
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  gap: 30px;
+}
+
+.quote-container img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.quote-text {
+  color: white;
+}
+
+.quote-message {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.quote-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.quote-role {
+  font-size: 14px;
+  font-style: italic;
+  color: #f0e6ff;
+}
+
