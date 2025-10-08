@@ -1,0 +1,589 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Body ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: auto;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: url("Images/Object.png") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px; /* to avoid header overlap */
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.hero-content button {
+  padding: 14px 36px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #C271FF;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-content button:hover {
+  background-color: #a956d4;
+}
+
+/* ===== Learn From The Pros ===== */
+.hero-learn {
+  margin-top: 60px;
+}
+
+.hero-learn h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.hero-learn .highlight {
+  color: #C271FF;
+}
+
+.profiles {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.profile {
+  text-align: center;
+  max-width: 180px;
+}
+
+.profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.profile h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.profile p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #ddd;
+}
+
+/* ===== Quote Section ===== */
+.quote {
+  background-color: #C271FF;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.quote-container {
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  gap: 30px;
+}
+
+.quote-container img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.quote-text {
+  color: white;
+}
+
+.quote-message {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.quote-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.quote-role {
+  font-size: 14px;
+  font-style: italic;
+  color: #f0e6ff;
+}
+
+
+
+
+
+.video-section {
+  display: flex;             /* align items horizontally */
+  justify-content: center;   /* center them */
+  gap: 20px;                 /* space between cards */
+  padding: 40px;
+  flex-wrap: wrap;  
+  background-color: white;   /* maintain white background */
+}
+
+.video-card {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(7, 22, 41, 0.18);
+  overflow: hidden;
+  width: 250px;              /* fixed card width */
+}
+
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.video-card img.preview {
+  width: 100%;               /* scale image to card width */
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;               /* adjust size if needed */
+  height: 50px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.play-button:hover {
+  opacity: 1;
+}
+
+.video-card .content {
+  padding: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.video-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1b1b1b;           /* maintain original heading color */
+  margin: 0 0 5px;
+}
+
+.video-card p {
+  font-size: 14px;
+  color: rgba(48, 49, 49, 0.6);  /* maintain paragraph color */
+  margin: 0 0 10px;
+}
+
+.stars img {
+  width: 80px;  /* maintain star size */
+  height: auto;
+}
+.author {
+  display: flex;
+  align-items: center;
+  gap: 8px;        /* space between image and name */
+  margin-top: 10px;
+}
+
+.author-img {
+  width: 24px;     /* small image */
+  height: 24px;
+  border-radius: 50%; /* optional: make it circular */
+}
+.author span {
+  font-size: 14px;
+  color: #07162a;   /* dark blue text for visibility */
+  font-weight: 500; /* optional: make it a little bolder */
+}
+
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .membership-section {
+            background-color: #1a2332;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .membership-title {
+            color: #c084fc;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto 50px auto;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 20px auto;
+            display: block;
+        }
+
+        .feature-title {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .feature-description {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .register-button {
+            background-color: #c084fc;
+            color: #ffffff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-button:hover {
+            background-color: #a855f7;
+        }
+
+        .activate-text {
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            .membership-section {
+                padding: 40px 20px;
+            }
+            
+            .activate-text {
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+
+        .header-bar {
+            background-color: #1a2332;
+            height: 20px;
+            width: 100%;
+        }
+
+        .faq-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            background-color: white;
+        }
+
+        .faq-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 80px;
+            letter-spacing: 0.1em;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px 80px;
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            max-width: 400px;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .faq-answer {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .footer-bar {
+            background-color: #1a2332;
+            height: 60px;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 40px;
+        }
+
+        .footer-text {
+            color: #888;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 768px) {
+            .faq-container {
+                padding: 40px 20px;
+            }
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .faq-title {
+                font-size: 2rem;
+                margin-bottom: 50px;
+            }
+        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.footer {
+    background-color: #1e3a5f;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.smile-icon img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin-top: 5px; /* pushes the smile image a little bit down */
+}
+
+.logo-text {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.center-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-icon {
+    color: white;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.facebook:hover {
+    color: #1877f2;
+}
+
+.twitter:hover {
+    color: #1da1f2;
+}
+
+.instagram:hover {
+    color: #e4405f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .center-text {
+        order: -1;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-section {
+        gap: 8px;
+    }
+
+    .logo-text {
+        font-size: 16px;
+    }
+
+    .social-icon {
+        font-size: 18px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
