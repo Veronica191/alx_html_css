@@ -523,7 +523,7 @@ body {
 }
 
 .social-icon {
-    color: rgb(34, 33, 33);
+    color: white;
     font-size: 20px;
     width: 40px;
     height: 40px;
@@ -541,15 +541,15 @@ body {
 }
 
 .facebook:hover {
-    color: #f2f4f7;
+    color: #1877f2;
 }
 
 .twitter:hover {
-    color: #f2f4f5;
+    color: #1da1f2;
 }
 
 .instagram:hover {
-    color: #f0eaeb;
+    color: #e4405f;
 }
 
 /* Responsive Design */
