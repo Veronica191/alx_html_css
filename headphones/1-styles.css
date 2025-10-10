@@ -1,0 +1,265 @@
+/* ---------------------- */
+/* FIRST CSS (Dark Landing Page) */
+/* ---------------------- */
+
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #0d0d0d;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff5c5c;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("Images/headphones_hero_1.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-content h3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #d1d1d1;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  background-color: #ff5c5c;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #ff3030;
+}
+
+.hero-content p {
+  font-size: 12px;
+  color: #d0d0d0;
+  margin-top: 40px;
+  line-height: 1.6;
+}
+
+/* ---------------------- */
+/* MOBILE MENU (CSS only) */
+/* ---------------------- */
+
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.menu-icon span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Responsive View */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+    z-index: 11;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 60px;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+  }
+
+  /* Show menu when checkbox is checked */
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    font-size: 15px;
+  }
+
+  /* Animate hamburger to X */
+  #menu-toggle:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  #menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  .hero-content h1 {
+    font-size: 18px;
+  }
+
+  .hero-content h3 {
+    font-size: 12px;
+  }
+}
+
+/* ---------------------- */
+/* SECOND CSS (What We Do Section) */
+/* ---------------------- */
+
+/* Section Title */
+
+.what-we-do {
+  background-color: #ffffff; /* White background */
+  padding: 50px 20px;
+}
+
+.what-we-do h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.description {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Services */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.service {
+  flex: 1 1 200px;
+  max-width: 250px;
+  text-align: center;
+}
+
+.service img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.service h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    margin-bottom: 30px;
+  }
+}

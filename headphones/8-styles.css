@@ -1,0 +1,521 @@
+/* ---------------------- */
+/* FIRST CSS (Dark Landing Page) */
+/* ---------------------- */
+
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #0d0d0d;
+}
+
+/* =======================
+   NAVBAR + HAMBURGER MENU
+   ======================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001529;
+  color: #fff;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 35px;
+  height: 35px;
+}
+
+.logo span {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Navigation Links (Desktop default) */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #ff3b3b;
+}
+
+/* Hamburger Icon - hidden on large screens */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* X Animation */
+.menu-icon.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* =======================
+   RESPONSIVE (TABLET + PHONE)
+   ======================= */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: #001529;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease;
+  }
+
+  .nav-links.active {
+    height: 180px;
+  }
+
+  .nav-links a {
+    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("Images/headphones_hero_1.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-content h3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #d1d1d1;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  background-color: #ff5c5c;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #ff3030;
+}
+
+.hero-content p {
+  font-size: 12px;
+  color: #d0d0d0;
+  margin-top: 40px;
+  line-height: 1.6;
+}
+
+/* ---------------------- */
+/* SECOND CSS (What We Do Section) */
+/* ---------------------- */
+
+.what-we-do {
+  background-color: #ffffff;
+  padding: 50px 20px;
+}
+
+.what-we-do h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.description {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.service {
+  flex: 1 1 200px;
+  max-width: 250px;
+  text-align: center;
+}
+
+.service img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.service h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    margin-bottom: 30px;
+  }
+}
+
+/* OUR RESULTS SECTION */
+.our-results {
+  position: relative;
+  background: url("Images/headphones_hero_2.jpg") center top/cover no-repeat;
+  color: #ffffff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.our-results .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.our-results .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.our-results h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.our-results p {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 1rem;
+  color: #d0d0d0;
+  line-height: 1.6;
+}
+
+.results-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.result {
+  position: relative;
+  width: 150px;
+  text-align: center;
+}
+
+.result img {
+  width: 100%;
+  display: block;
+  filter: hue-rotate(330deg) saturate(5); /* Makes pentagon red */
+}
+
+.result .percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e93737;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.result p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .result {
+    width: 120px;
+  }
+
+  .result .percent {
+    font-size: 1.2rem;
+  }
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.contact-section .container {
+  max-width: 400px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #111827;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff5c5c;
+}
+
+.contact-form button {
+  background-color: #ff5c5c;
+  color: #ffffff;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #e04d4d;
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 60px 15px;
+  }
+
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* FOOTER SECTION */
+.footer {
+  background-color: #0f2644;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.favicon-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-text {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.center-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  color: rgb(238, 234, 234);
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: rgba(252, 252, 252, 0.1);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .center-text {
+    order: -1;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+}
+
+/* ---------------------- */
+/* ✨ ANIMATIONS (Added) ✨ */
+/* ---------------------- */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.service:hover,
+.result:hover {
+  transform: scale(1.08) rotate(2deg);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
